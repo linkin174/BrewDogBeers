@@ -8,6 +8,7 @@
 import UIKit
 
 class BeerListTableViewController: UITableViewController {
+    
     var beers: [Beer] = [] {
         didSet {
             tableView.reloadData()
@@ -38,11 +39,6 @@ class BeerListTableViewController: UITableViewController {
         let beer = beers[indexPath.row]
         var content = cell.defaultContentConfiguration()
         content.text = beer.name
-        NetworkManager.shared.fetchImage(from: beer.imageURL ?? "") { data in
-            DispatchQueue.main.async {
-                content.image = UIImage(data: data)
-            }
-        }
         cell.contentConfiguration = content
         return cell
     }

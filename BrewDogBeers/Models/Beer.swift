@@ -20,7 +20,7 @@ struct Beer: Codable {
         """
         ABV = \(String(format: "%.2f", abv ?? 0.0))
         IBU = \(String(format: "%.2f", ibu ?? 0.0))
-        EBC = \(String(format: "%.2d", ebc ?? 0))
+        EBC = \(String(ebc ?? 0))
         """
     }
 
