@@ -9,21 +9,28 @@
 /* Begin PBXBuildFile section */
 		707074EF2806F7F700736BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707074EE2806F7F700736BAF /* AppDelegate.swift */; };
 		707074F12806F7F700736BAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707074F02806F7F700736BAF /* SceneDelegate.swift */; };
-		707074F32806F7F700736BAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707074F22806F7F700736BAF /* ViewController.swift */; };
 		707074F62806F7F700736BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707074F42806F7F700736BAF /* Main.storyboard */; };
 		707074F82806F7F900736BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 707074F72806F7F900736BAF /* Assets.xcassets */; };
 		707074FB2806F7F900736BAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707074F92806F7F900736BAF /* LaunchScreen.storyboard */; };
+		707075032806F84000736BAF /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707075022806F84000736BAF /* Beer.swift */; };
+		707075052806FB3F00736BAF /* BeerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707075042806FB3F00736BAF /* BeerListTableViewController.swift */; };
+		707075072806FB7900736BAF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707075062806FB7900736BAF /* NetworkManager.swift */; };
+		7070750A2806FBD600736BAF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 707075092806FBD600736BAF /* Alamofire */; };
+		707075122807394700736BAF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707075112807394700736BAF /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		707074EB2806F7F700736BAF /* BrewDogBeers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewDogBeers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		707074EE2806F7F700736BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		707074F02806F7F700736BAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		707074F22806F7F700736BAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		707074F52806F7F700736BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		707074F72806F7F900736BAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		707074FA2806F7F900736BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		707074FC2806F7F900736BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		707075022806F84000736BAF /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		707075042806FB3F00736BAF /* BeerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListTableViewController.swift; sourceTree = "<group>"; };
+		707075062806FB7900736BAF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		707075112807394700736BAF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7070750A2806FBD600736BAF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +64,26 @@
 		707074ED2806F7F700736BAF /* BrewDogBeers */ = {
 			isa = PBXGroup;
 			children = (
-				707074EE2806F7F700736BAF /* AppDelegate.swift */,
-				707074F02806F7F700736BAF /* SceneDelegate.swift */,
-				707074F22806F7F700736BAF /* ViewController.swift */,
+				7070751328074DFD00736BAF /* App */,
 				707074F42806F7F700736BAF /* Main.storyboard */,
 				707074F72806F7F900736BAF /* Assets.xcassets */,
 				707074F92806F7F900736BAF /* LaunchScreen.storyboard */,
-				707074FC2806F7F900736BAF /* Info.plist */,
+				707075022806F84000736BAF /* Beer.swift */,
+				707075042806FB3F00736BAF /* BeerListTableViewController.swift */,
+				707075062806FB7900736BAF /* NetworkManager.swift */,
+				707075112807394700736BAF /* AboutViewController.swift */,
 			);
 			path = BrewDogBeers;
+			sourceTree = "<group>";
+		};
+		7070751328074DFD00736BAF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				707074EE2806F7F700736BAF /* AppDelegate.swift */,
+				707074F02806F7F700736BAF /* SceneDelegate.swift */,
+				707074FC2806F7F900736BAF /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +102,9 @@
 			dependencies = (
 			);
 			name = BrewDogBeers;
+			packageProductDependencies = (
+				707075092806FBD600736BAF /* Alamofire */,
+			);
 			productName = BrewDogBeers;
 			productReference = 707074EB2806F7F700736BAF /* BrewDogBeers.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 707074E22806F7F700736BAF;
+			packageReferences = (
+				707075082806FBD600736BAF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 707074EC2806F7F700736BAF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				707074F32806F7F700736BAF /* ViewController.swift in Sources */,
+				707075122807394700736BAF /* AboutViewController.swift in Sources */,
 				707074EF2806F7F700736BAF /* AppDelegate.swift in Sources */,
 				707074F12806F7F700736BAF /* SceneDelegate.swift in Sources */,
+				707075072806FB7900736BAF /* NetworkManager.swift in Sources */,
+				707075032806F84000736BAF /* Beer.swift in Sources */,
+				707075052806FB3F00736BAF /* BeerListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,12 +317,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BS64CSG2MY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BrewDogBeers/Info.plist;
+				INFOPLIST_FILE = BrewDogBeers/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +332,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +345,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BS64CSG2MY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BrewDogBeers/Info.plist;
+				INFOPLIST_FILE = BrewDogBeers/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +360,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		707075082806FBD600736BAF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		707075092806FBD600736BAF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 707075082806FBD600736BAF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 707074E32806F7F700736BAF /* Project object */;
 }
