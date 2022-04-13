@@ -4,11 +4,12 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--BREW DOGS BEER'S-->
         <scene sceneID="oR9-ZM-f2O">
             <objects>
                 <tableViewController id="N6f-Md-Ndl" customClass="BeerListTableViewController" customModule="BrewDogBeers" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +32,7 @@
                             <outlet property="delegate" destination="N6f-Md-Ndl" id="BRL-Yt-5Jv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="wg8-CD-BUo"/>
+                    <navigationItem key="navigationItem" title="BREW DOGS BEER'S" id="wg8-CD-BUo"/>
                     <connections>
                         <segue destination="Iq9-rD-4MU" kind="show" identifier="showDeteailedInfo" id="dSU-uh-aCt"/>
                     </connections>
@@ -40,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="470" y="98"/>
         </scene>
-        <!--About View Controller-->
+        <!--INFO-->
         <scene sceneID="9Ns-RU-Jd3">
             <objects>
                 <viewController id="Iq9-rD-4MU" customClass="AboutViewController" customModule="BrewDogBeers" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,19 +49,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ojZ-z5-1A1">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ojZ-z5-1A1">
                                 <rect key="frame" x="16" y="104" width="382" height="742"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LXZ-Mf-FSl">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="367"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="297"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8Y-sZ-h6l">
-                                        <rect key="frame" x="0.0" y="375" width="382" height="367"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbf-1h-5f6">
+                                        <rect key="frame" x="0.0" y="305" width="382" height="148"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8Y-sZ-h6l">
+                                        <rect key="frame" x="0.0" y="461" width="382" height="281"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="cbf-1h-5f6" firstAttribute="height" secondItem="ojZ-z5-1A1" secondAttribute="height" multiplier="0.2" id="Ytu-Hp-yP5"/>
+                                    <constraint firstItem="LXZ-Mf-FSl" firstAttribute="height" secondItem="ojZ-z5-1A1" secondAttribute="height" multiplier="0.4" id="tFf-9w-kif"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xpr-SU-2z7"/>
@@ -72,9 +83,10 @@
                             <constraint firstItem="ojZ-z5-1A1" firstAttribute="leading" secondItem="bbW-IY-Vfe" secondAttribute="leading" constant="16" id="gTB-Dj-ec2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4nF-it-8xH"/>
+                    <navigationItem key="navigationItem" title="INFO" id="4nF-it-8xH"/>
                     <connections>
-                        <outlet property="productDescription" destination="o8Y-sZ-h6l" id="Ynq-TC-udp"/>
+                        <outlet property="characteristicsLabel" destination="cbf-1h-5f6" id="cX8-aa-7Ok"/>
+                        <outlet property="descriptionLabel" destination="o8Y-sZ-h6l" id="Ynq-TC-udp"/>
                         <outlet property="productImage" destination="LXZ-Mf-FSl" id="9rS-YW-ZDX"/>
                     </connections>
                 </viewController>
@@ -89,6 +101,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IhQ-AX-EZz">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="20"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="N6f-Md-Ndl" kind="relationship" relationship="rootViewController" id="gyn-8b-diF"/>
