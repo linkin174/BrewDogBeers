@@ -69,9 +69,7 @@
 				707074F72806F7F900736BAF /* Assets.xcassets */,
 				707074F92806F7F900736BAF /* LaunchScreen.storyboard */,
 				707075022806F84000736BAF /* Beer.swift */,
-				707075042806FB3F00736BAF /* BeerListTableViewController.swift */,
-				707075062806FB7900736BAF /* NetworkManager.swift */,
-				707075112807394700736BAF /* AboutViewController.swift */,
+				70ACADDC280750FA00B59F08 /* ViewControllers */,
 			);
 			path = BrewDogBeers;
 			sourceTree = "<group>";
@@ -84,6 +82,16 @@
 				707074FC2806F7F900736BAF /* Info.plist */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		70ACADDC280750FA00B59F08 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				707075042806FB3F00736BAF /* BeerListTableViewController.swift */,
+				707075062806FB7900736BAF /* NetworkManager.swift */,
+				707075112807394700736BAF /* AboutViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
