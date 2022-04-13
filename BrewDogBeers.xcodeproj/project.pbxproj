@@ -65,10 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				7070751328074DFD00736BAF /* App */,
-				707074F42806F7F700736BAF /* Main.storyboard */,
+				70ACADDE2807510F00B59F08 /* Storyboards */,
 				707074F72806F7F900736BAF /* Assets.xcassets */,
-				707074F92806F7F900736BAF /* LaunchScreen.storyboard */,
-				707075022806F84000736BAF /* Beer.swift */,
+				70ACADDD2807510A00B59F08 /* Models */,
 				70ACADDC280750FA00B59F08 /* ViewControllers */,
 			);
 			path = BrewDogBeers;
@@ -92,6 +91,23 @@
 				707075112807394700736BAF /* AboutViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		70ACADDD2807510A00B59F08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				707075022806F84000736BAF /* Beer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		70ACADDE2807510F00B59F08 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				707074F42806F7F700736BAF /* Main.storyboard */,
+				707074F92806F7F900736BAF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
