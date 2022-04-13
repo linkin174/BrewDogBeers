@@ -66,7 +66,7 @@
 			children = (
 				7070751328074DFD00736BAF /* App */,
 				70ACADDE2807510F00B59F08 /* Storyboards */,
-				707074F72806F7F900736BAF /* Assets.xcassets */,
+				70ACADDF2807512800B59F08 /* Resources */,
 				70ACADDD2807510A00B59F08 /* Models */,
 				70ACADDC280750FA00B59F08 /* ViewControllers */,
 			);
@@ -108,6 +108,14 @@
 				707074F92806F7F900736BAF /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		70ACADDF2807512800B59F08 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				707074F72806F7F900736BAF /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
