@@ -38,7 +38,7 @@ class NetworkManager {
                 case .success(let value):
                     completion(.success(Beer.getBeers(from: value)))
                 case .failure(let error):
-                    print(error.localizedDescription)
+                    completion(.failure(error))
                 }
             }
     }
