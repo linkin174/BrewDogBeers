@@ -33,7 +33,9 @@ struct Beer: Codable {
         case ebc
         case contributedBy = "contributed_by"
     }
-
+    
+//Оставил на будущее
+/*
     init(name: String, description: String, imageURL: String, abv: Double, ibu: Double, ebc: Int, contirbutedBy: ContributedBy) {
         self.name = name
         self.description = description
@@ -43,7 +45,7 @@ struct Beer: Codable {
         self.ebc = ebc
         contributedBy = contirbutedBy.rawValue
     }
-
+*/
     init(beerData: [String: Any]) {
         name = beerData["name"] as? String
         description = beerData["description"] as? String

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70469B9C2807E5CD0098D264 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70469B9B2807E5CD0098D264 /* CustomTableViewCell.swift */; };
 		707074EF2806F7F700736BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707074EE2806F7F700736BAF /* AppDelegate.swift */; };
 		707074F12806F7F700736BAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707074F02806F7F700736BAF /* SceneDelegate.swift */; };
 		707074F62806F7F700736BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707074F42806F7F700736BAF /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70469B9B2807E5CD0098D264 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		707074EB2806F7F700736BAF /* BrewDogBeers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewDogBeers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		707074EE2806F7F700736BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		707074F02806F7F700736BAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				707075042806FB3F00736BAF /* BeerListTableViewController.swift */,
 				707075112807394700736BAF /* AboutViewController.swift */,
+				70469B9B2807E5CD0098D264 /* CustomTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				707075122807394700736BAF /* AboutViewController.swift in Sources */,
 				707074EF2806F7F700736BAF /* AppDelegate.swift in Sources */,
 				707074F12806F7F700736BAF /* SceneDelegate.swift in Sources */,
+				70469B9C2807E5CD0098D264 /* CustomTableViewCell.swift in Sources */,
 				707075072806FB7900736BAF /* NetworkManager.swift in Sources */,
 				707075032806F84000736BAF /* Beer.swift in Sources */,
 				707075052806FB3F00736BAF /* BeerListTableViewController.swift in Sources */,

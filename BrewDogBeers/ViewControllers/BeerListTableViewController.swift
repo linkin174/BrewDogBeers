@@ -17,7 +17,7 @@ class BeerListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.reloadData()
+        self.tableView.separatorStyle = .none
         NetworkManager.shared.alamofireRequest(from: NetworkManager.shared.apiURL) { response in
             switch response {
             case .success(let data):
@@ -35,16 +35,14 @@ class BeerListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "beer", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "beer", for: indexPath) as! CustomTableViewCell
         let beer = beers[indexPath.row]
-        var content = cell.defaultContentConfiguration()
-        content.text = beer.name
-        cell.contentConfiguration = content
+        cell.setupCell(with: beer)
         return cell
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        60
+        100
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

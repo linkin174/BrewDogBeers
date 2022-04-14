@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--BREW DOGS BEER'S-->
+        <!--BREW DOGS BREWERY-->
         <scene sceneID="oR9-ZM-f2O">
             <objects>
                 <tableViewController id="N6f-Md-Ndl" customClass="BeerListTableViewController" customModule="BrewDogBeers" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,13 +18,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="beer" id="MGn-8Z-IfH">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="beer" rowHeight="144" id="MGn-8Z-IfH" customClass="CustomTableViewCell" customModule="BrewDogBeers" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="144"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MGn-8Z-IfH" id="wEw-gw-SF1">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOv-gS-G6w">
+                                            <rect key="frame" x="8" y="8" width="398" height="128"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q2T-gH-YfS">
+                                                    <rect key="frame" x="0.0" y="8" width="112" height="112"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Q2T-gH-YfS" secondAttribute="height" multiplier="1:1" id="aR7-4B-RkG"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pw-V8-1FT">
+                                                    <rect key="frame" x="120" y="51.5" width="270" height="25"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                            <constraints>
+                                                <constraint firstItem="Q2T-gH-YfS" firstAttribute="leading" secondItem="OOv-gS-G6w" secondAttribute="leading" id="3WC-Ay-7Dt"/>
+                                                <constraint firstAttribute="trailing" secondItem="9pw-V8-1FT" secondAttribute="trailing" constant="8" id="FsX-me-74P"/>
+                                                <constraint firstItem="9pw-V8-1FT" firstAttribute="leading" secondItem="Q2T-gH-YfS" secondAttribute="trailing" constant="8" id="Ucd-xA-Ox3"/>
+                                                <constraint firstItem="9pw-V8-1FT" firstAttribute="centerY" secondItem="OOv-gS-G6w" secondAttribute="centerY" id="Xn3-xh-3Kq"/>
+                                                <constraint firstItem="Q2T-gH-YfS" firstAttribute="centerY" secondItem="OOv-gS-G6w" secondAttribute="centerY" id="cAG-xh-JOK"/>
+                                                <constraint firstItem="Q2T-gH-YfS" firstAttribute="top" secondItem="OOv-gS-G6w" secondAttribute="top" constant="8" id="oI6-k5-dwT"/>
+                                                <constraint firstAttribute="bottom" secondItem="Q2T-gH-YfS" secondAttribute="bottom" constant="8" id="qd5-Oc-fAp"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <integer key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="OOv-gS-G6w" secondAttribute="trailing" constant="8" id="Fn1-P8-xGU"/>
+                                        <constraint firstItem="OOv-gS-G6w" firstAttribute="top" secondItem="wEw-gw-SF1" secondAttribute="top" constant="8" id="YWR-cw-muU"/>
+                                        <constraint firstAttribute="bottom" secondItem="OOv-gS-G6w" secondAttribute="bottom" constant="8" id="ose-g9-gWb"/>
+                                        <constraint firstItem="OOv-gS-G6w" firstAttribute="leading" secondItem="wEw-gw-SF1" secondAttribute="leading" constant="8" id="vFm-Y4-sIR"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="9pw-V8-1FT" id="Wbf-39-BFY"/>
+                                    <outlet property="productImage" destination="Q2T-gH-YfS" id="WDh-HR-v4h"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,14 +77,14 @@
                             <outlet property="delegate" destination="N6f-Md-Ndl" id="BRL-Yt-5Jv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="BREW DOGS BEER'S" id="wg8-CD-BUo"/>
+                    <navigationItem key="navigationItem" title="BREW DOGS BREWERY" id="wg8-CD-BUo"/>
                     <connections>
                         <segue destination="Iq9-rD-4MU" kind="show" identifier="showDeteailedInfo" id="dSU-uh-aCt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Dm-dS-hmD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="470" y="98"/>
+            <point key="canvasLocation" x="469.56521739130437" y="97.767857142857139"/>
         </scene>
         <!--INFO-->
         <scene sceneID="9Ns-RU-Jd3">
@@ -117,6 +162,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
