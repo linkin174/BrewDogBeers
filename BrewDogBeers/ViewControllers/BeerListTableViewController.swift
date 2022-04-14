@@ -9,12 +9,16 @@ import UIKit
 
 class BeerListTableViewController: UITableViewController {
     
+    //MARK: - Public properties
+    
     var beers: [Beer] = [] {
         didSet {
             tableView.reloadData()
         }
     }
-
+    
+    //MARK: - Override methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.separatorStyle = .none
@@ -44,7 +48,9 @@ class BeerListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
-
+    
+    //MARK: - Table view delegate
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let beer = beers[indexPath.row]
         performSegue(withIdentifier: "showDeteailedInfo", sender: beer)

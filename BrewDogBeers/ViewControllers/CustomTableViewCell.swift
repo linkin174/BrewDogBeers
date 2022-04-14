@@ -19,10 +19,9 @@ class CustomTableViewCell: UITableViewCell {
 
     func setupCell(with product: Beer) {
         guard let imageURL = product.imageURL else { return }
-        NetworkManager.shared.fetchImage(from: imageURL) { data in
+        NetworkManager.shared.fetchImageWithAF(from: imageURL) { data in
             self.productImage.image = UIImage(data: data)
             self.nameLabel.text = product.name
         }
     }
-
 }

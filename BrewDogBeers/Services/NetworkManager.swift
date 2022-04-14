@@ -16,20 +16,6 @@ class NetworkManager {
     
     private init() {}
     
-    func fetchImage(from url: String, completion: @escaping (Data) -> Void) {
-        guard let url = URL(string: url) else {
-            return
-        }
-        DispatchQueue.global().async {
-            guard let data = try? Data(contentsOf: url) else {
-                return
-            }
-            DispatchQueue.main.async {
-                completion(data)
-            }
-        }
-    }
-    
     func alamofireRequest(from url: String, completion: @escaping (Result<[Beer], AFError>) -> Void) {
         AF.request(url)
             .validate()
@@ -42,4 +28,17 @@ class NetworkManager {
                 }
             }
     }
+    
+    func fetchImageWithAF(from url: String, completion: @escaping (Data) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseData { responseData in
+                guard let data = responseData.data else {
+                    print(responseData.error?.localizedDescription ?? "No errors")
+                    return
+                }
+                completion(data)
+            }
+    }
+    
 }

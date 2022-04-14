@@ -61,13 +61,8 @@ struct Beer: Codable {
     }
 
     static func getBeers(from value: Any) -> [Beer] {
-        var beers: [Beer] = []
         guard let beersData = value as? [[String: Any]] else { return [] }
-        for beerData in beersData {
-            let beer = Beer(beerData: beerData)
-            beers.append(beer)
-        }
-        return beers
+        return beersData.compactMap { Beer(beerData: $0) }
     }
 }
 
