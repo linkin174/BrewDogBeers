@@ -34,6 +34,12 @@ struct Beer: Codable {
         case contributedBy = "contributed_by"
     }
     
+    
+    enum ContributedBy: String, Codable {
+        case aliSkinnerAliSkinner = "Ali Skinner <AliSkinner>"
+        case samMasonSamjbmason = "Sam Mason <samjbmason>"
+    }
+
 //Оставил на будущее
 /*
     init(name: String, description: String, imageURL: String, abv: Double, ibu: Double, ebc: Int, contirbutedBy: ContributedBy) {
@@ -65,10 +71,5 @@ struct Beer: Codable {
         }
         return beers
     }
-}
-
-enum ContributedBy: String, Codable {
-    case aliSkinnerAliSkinner = "Ali Skinner <AliSkinner>"
-    case samMasonSamjbmason = "Sam Mason <samjbmason>"
 }
 
