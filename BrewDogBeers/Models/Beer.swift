@@ -6,8 +6,6 @@
 
 import Foundation
 
-// MARK: - Beer
-
 struct Beer: Codable {
     let name: String?
     let description: String?
@@ -15,7 +13,7 @@ struct Beer: Codable {
     let abv: Double?
     let ibu: Double?
     let ebc: Int?
-    let contributedBy: String?
+    let contributedBy: ContributedBy?
     var characteristics: String? {
         """
         ABV = \(String(format: "%.2f", abv ?? 0.0))
@@ -59,7 +57,7 @@ struct Beer: Codable {
         abv = beerData["abv"] as? Double
         ibu = beerData["ibu"] as? Double
         ebc = beerData["ebc"] as? Int
-        contributedBy = beerData["contributed_by"] as? ContributedBy.RawValue
+        contributedBy = beerData["contributed_by"] as? ContributedBy
     }
 
     static func getBeers(from value: Any) -> [Beer] {
